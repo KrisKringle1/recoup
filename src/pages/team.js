@@ -1,8 +1,9 @@
 import React from 'react'
 import Menu from '../components/menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Img from "gatsby-image"
 
-const Team = () => {
+const Team = (props) => {
 
 
   return (
@@ -11,10 +12,10 @@ const Team = () => {
     <h1 className="text-center">Our Team</h1>
     <div className="container mt-5">
       <div className="flex-row d-flex">
-        <div className="image-container col-6">
-          <div className="image-test-box"></div>
+        <div className="col-4 m-5">
+          <Img fluid={props.data.matt.childImageSharp.fluid}/>
         </div>
-        <div className='text-container col-6'>
+        <div className='text-container col-6 m-5'>
           <h3>Mattison Fetters</h3>
           <strong>Husband, Father, Friend, Athlete, open and collaborative </strong>
           <p>Favorite quote: <i>'Be strong enough to stand alone, smart enough to know when you need help, and brave enough to ask for it.'</i></p>
@@ -32,7 +33,7 @@ const Team = () => {
 
     <div className="container mt-5">
       <div className="flex-row d-flex">
-        <div className='text-container col-6'>
+        <div className='text-container col-6 m-5'>
           <h3>Stevie Fetters</h3>
            <strong>Wife, Mother, Health advocate, Trainer,  Adventure Seeker, Music lover,  French bulldog owner, Psychology Major </strong>
           <p>Favorite quote: <i>“If you always put limits on everything you do, physical or anything else, it will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them.”</i></p>
@@ -45,18 +46,18 @@ const Team = () => {
             <li>CPR/AED and First Aid Certified</li>
           </ul>
         </div>
-        <div className="image-container col-6">
-          <div className="image-test-box"></div>
+          <div className="col-4 m-5">
+          <Img fluid={props.data.stevie.childImageSharp.fluid}/>
         </div>
       </div>
     </div>
 
     <div className="container mt-5">
       <div className="flex-row d-flex">
-        <div className="image-container col-6">
-          <div className="image-test-box"></div>
+          <div className="col-4 m-5">
+          <Img fluid={props.data.bo.childImageSharp.fluid}/>
         </div>
-        <div className='text-container col-6'>
+        <div className='text-container col-6 m-5'>
           <h3>Bo Wind</h3>
           <strong>Fitness competitor, Travel, Family and Friends, Gadgets, Bike rides in the sunshine state, Love for homemade meals and good coffee.</strong>
           <p>Favorite quote: <i>“Surround yourself with people who build you up and inspire you not to give up”.</i></p>
@@ -74,3 +75,29 @@ const Team = () => {
 }
 
 export default Team
+
+export const pageQuery = graphql`
+    query {
+      matt: file(relativePath: { eq: "Matt.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      stevie: file(relativePath: { eq: "Stevie.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+     bo: file(relativePath: { eq: "Bo.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `

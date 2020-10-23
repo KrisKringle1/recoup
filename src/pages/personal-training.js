@@ -1,8 +1,9 @@
 import React from 'react'
 import Menu from '../components/menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Img from "gatsby-image"
 
-const PersonalTraining = () => {
+const PersonalTraining = (props) => {
 
 
   return (
@@ -14,7 +15,7 @@ const PersonalTraining = () => {
     <div className="container mt-5">
       <div className="flex-row d-flex">
         <div className="image-container col-6">
-          <div className="image-test-box"></div>
+          <Img fluid={props.data.trainingOne.childImageSharp.fluid}/>
         </div>
         <div className='text-container col-6'>
           <h3>You Are The Focus</h3>
@@ -47,7 +48,7 @@ const PersonalTraining = () => {
             </p>
         </div>
         <div className="image-container col-6  m-5">
-          <div className="image-test-box"></div>
+           <Img fluid={props.data.trainingTwo.childImageSharp.fluid}/>
         </div>
       </div>
     </div>
@@ -55,7 +56,7 @@ const PersonalTraining = () => {
      <div className="container mt-5">
       <div className="flex-row d-flex">
         <div className="image-container col-6">
-          <div className="image-test-box"></div>
+           <Img fluid={props.data.trainingThree.childImageSharp.fluid}/>
         </div>
         <div className='text-container col-6'>
           <h3>Get Started Today!</h3>
@@ -74,3 +75,30 @@ const PersonalTraining = () => {
 }
 
 export default PersonalTraining
+
+
+export const pageQuery = graphql`
+    query {
+      trainingOne: file(relativePath: { eq: "personal-training-1.jpeg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      trainingTwo: file(relativePath: { eq: "personal-training-2.jpeg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+     trainingThree: file(relativePath: { eq: "personal-training-3.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `

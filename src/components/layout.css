@@ -596,10 +596,10 @@ pre tt:after {
   }
 }
 
-.image-test-box{
-  background-color: red;
-  height: 250px;
-  width: 250px;
+.image-container{
+
+  height: 500px;
+
 }
 
 .masthead{
