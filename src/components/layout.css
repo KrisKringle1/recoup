@@ -601,3 +601,11 @@ pre tt:after {
   height: 250px;
   width: 250px;
 }
+
+.masthead{
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
