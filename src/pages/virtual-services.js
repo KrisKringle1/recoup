@@ -9,10 +9,11 @@ const VirtualServices = () => {
     <Menu />
     <h1 className="text-center">The 21 Day At-Home Transformation Program!</h1>
     <h3 className="text-center mt-4">Guaranteed to lose 8-12 lbs or we'll coach you for free for another 21 days.</h3>
-
+    <div className="container">
     <p className="text-center">It's here! Our BEST and most successful transformation program can be done all from the comfort of your home
       for a limited time. Join the hundreds of people before you who torched their fat, dropped inches, and never had
       to leave their living room.</p>
+    </div>
     <div className="text-center m-3">
           <strong>100% Remote | Workouts | Nutrition | Accountability & Support | Results</strong>
     </div>
@@ -34,7 +35,8 @@ const VirtualServices = () => {
     </div>
     <h2 className="text-center">Start Dates Available Every Week! - Let's Do This!</h2>
     <h3 className="text-center my-4"><u>Join today and we'll take 30% off</u></h3>
-    <p className="text-center my-2">PLUS, your entire investment acts as a credit and deposit towards a future program when we open back up! <span className="d-block">Super cool, huh?</span></p>
+
+       <p className="text-center my-2">PLUS, your entire investment acts as a credit and deposit towards a future program when we open back up! <span className="d-block">Super cool, huh?</span></p>
 
     <h3 className="text-center">Don't be a victim of self-isolation! Make the most of it!</h3>
     <ul className="text-center">
