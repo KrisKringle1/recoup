@@ -1,8 +1,9 @@
 import React from 'react'
 import Menu from '../components/menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Img from "gatsby-image"
 
-const Story = () => {
+const Story = (props) => {
 
 
   return (
@@ -10,11 +11,11 @@ const Story = () => {
     <Menu />
     <h1 className="text-center">Our Story</h1>
     <div className="container mt-5">
-      <div className="flex-row d-flex">
-        <div className="image-container col-6">
-          <div className="image-test-box"></div>
+      <div className="flex-row d-flex m-5 justify-content-between">
+        <div className="image-container col-6 mr-5">
+          <Img fluid={props.data.trio.childImageSharp.fluid} />
         </div>
-        <div className='text-container col-6'>
+        <div className='text-container col-6 ml-5'>
           <p>Changing peoples lives forever.  Now THAT gets us out of bed in the morning.
             If you’re reading this page we’d like to thank you for your consideration in
             entrusting us with your health and wellness.
@@ -34,3 +35,15 @@ const Story = () => {
 }
 
 export default Story
+
+export const pageQuery = graphql`
+    query {
+      trio: file(relativePath: { eq: "trio.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 1800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    `

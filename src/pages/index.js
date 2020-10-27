@@ -3,11 +3,14 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Layout from "../components/layout"
 import Image from "../components/image"
+import Img from "gatsby-image"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Menu from '../components/menu'
 
-const IndexPage = (props) => (
+const IndexPage = (props) => {
+
+  return(
   <Layout>
     <Menu />
     <SEO title="Home" />
@@ -31,20 +34,24 @@ const IndexPage = (props) => (
       <div className="row">
         <div className="col-6">
           <h3>Personal Training</h3>
+          <Img fluid={props.data.personalTrainingThumbnail.childImageSharp.fluid} />
           <p>Whether it’s day 1, or 1,001, don’t leave your health up to chance.  Find out why thousands of your OC neighbors have entrusted us with their health and wellness.</p>
         </div>
         <div className="col-6">
           <h3>Nutrition Coaching</h3>
+           <Img fluid={props.data.nutritionThumbnail.childImageSharp.fluid} />
           <p>Maybe you’ve heard it before.  “Nutrition is 80% of your results.”  Boost your results with our team of food coaches and allow us to take the guess work out of your nutrition.</p>
         </div>
       </div>
       <div className="row">
         <div className="col-6">
           <h3>Results 100% Guaranteed</h3>
+          <Img fluid={props.data.resultsThumbnail.childImageSharp.fluid} />
           <p>Don’t take our word for it.  See what our clients have to say about their success and about the life long relationships we’ve established.</p>
         </div>
         <div className="col-6">
-          <h3>Click here for your complementary consultation</h3>
+          <h3>Complementary Consultation</h3>
+          <Img fluid={props.data.consultThumbnail.childImageSharp.fluid} />
           <p>We’ll take the time to figure out what it is that you want, to give you exactly what you need.</p>
         </div>
       </div>
@@ -58,6 +65,7 @@ const IndexPage = (props) => (
 
   </Layout>
   )
+}
 
 
 export default IndexPage
@@ -71,8 +79,33 @@ export const pageQuery = graphql`
           }
         }
       }
+      nutritionThumbnail: file(relativePath: { eq: "nutrition-coaching-thumbnail.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      personalTrainingThumbnail: file(relativePath: { eq: "personal-training-thumbnail.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      resultsThumbnail: file(relativePath: { eq: "results-thumbnail.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      consultThumbnail: file(relativePath: { eq: "consult-thumbnail.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `
-
-
-{/*  */}
