@@ -39,8 +39,8 @@ const VirtualServices = () => {
        <p className="text-center my-2">PLUS, your entire investment acts as a credit and deposit towards a future program when we open back up! <span className="d-block">Super cool, huh?</span></p>
 
     <h3 className="text-center">Don't be a victim of self-isolation! Make the most of it!</h3>
-    <ul className="text-center">
-      {/* get rid of the unordered list  */}
+    <ul className="text-center list">
+
       <li>1. Take care of yourself</li>
       <li>2. Take care of your friends and family</li>
       <li>3. Stay healthy, get strong and boost your immune system</li>

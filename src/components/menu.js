@@ -15,15 +15,15 @@ const Menu = () => {
         justifyContent: 'space-evenly'
       }}>
 
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/28-day-kickstart">28 Day KICKSTART</Link></li>
-        <li><Link to="/personal-training">Personal Training</Link></li>
-        <li><Link to="/success-stories">Success Stories</Link></li>
-        <li><Link to="/blog">The RECOUP Blog</Link></li>
-        <li><Link to="/team">Team</Link></li>
-        <li><Link to="/virtual-services">Virtual Services</Link></li>
-        <li><Link to="/our-story">Our Story</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/" activeClassName="active">Home</Link></li>
+        <li><Link to="/28-day-kickstart" activeClassName="active">28 Day KICKSTART</Link></li>
+        <li><Link to="/personal-training" activeClassName="active">Personal Training</Link></li>
+        <li><Link to="/success-stories" activeClassName="active">Success Stories</Link></li>
+        <li><Link to="/blog" activeClassName="active">The RECOUP Blog</Link></li>
+        <li><Link to="/team" activeClassName="active">Team</Link></li>
+        <li><Link to="/virtual-services" activeClassName="active">Virtual Services</Link></li>
+        <li><Link to="/our-story" activeClassName="active">Our Story</Link></li>
+        <li><Link to="/contact" activeClassName="active">Contact</Link></li>
 
       </ul>
 
