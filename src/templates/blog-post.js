@@ -8,9 +8,12 @@ export default function Template ({data}){
     <div>
       <Link to="/blog">Go Back</Link>
       <hr />
-      <h1>{post.frontmatter.title}</h1>
-      <h4>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h4>
-      <div dangerouslySetInnerHTML={{ __html: post.html}} />
+      <div className="container">
+        <h1 className="text-center mt-5 mx-5">{post.frontmatter.title}</h1>
+        <p className="m-4 text-center">Posted by {post.frontmatter.author} on {post.frontmatter.date}</p>
+
+        <div dangerouslySetInnerHTML={{ __html: post.html}} />
+      </div>
     </div>
   )
 }
