@@ -1,11 +1,14 @@
 import React from 'react';
 import {graphql, Link} from 'gatsby'
+import SEO from '../components/seo'
 
 export default function Template ({data}){
   const post = data.markdownRemark
 
   return (
+
     <div>
+      <SEO title="blog" />
       <Link to="/blog">Go Back</Link>
       <hr />
       <div className="container">

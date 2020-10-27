@@ -1,42 +1,37 @@
-import { Link } from "gatsby"
+import { Link, graphql,useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from "gatsby-image"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+const Header = () => {
+   const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: { eq: "logo.jpg" }) {
+        childImageSharp {
+          fluid( maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    `)
+  return(
+    <>
+      <header>
+        <div className="container">
+          <div className="row">
+            <div className="col-4 mr-5 pr-5">
+              <Img fluid={data.logo.childImageSharp.fluid} />
+            </div>
+            <div className="col-6 text-center mt-4">
+              <h1>Real People. Real Results.</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+  </>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

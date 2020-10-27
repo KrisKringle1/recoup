@@ -12,7 +12,6 @@ const IndexPage = (props) => {
 
   return(
   <Layout>
-    <Menu />
     <SEO title="Home" />
 
     <BackgroundImage
@@ -60,9 +59,6 @@ const IndexPage = (props) => {
     <h3 className="text-center">Request More Information</h3>
     <p className="text-center">info@recouppersonaltraining.com</p>
     <p className="text-center">(714) 262-4003</p>
-
-
-
   </Layout>
   )
 }
