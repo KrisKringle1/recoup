@@ -609,3 +609,7 @@ pre tt:after {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.list{
+  list-style-type: none;
+}

@@ -10,7 +10,7 @@ const PersonalTraining = (props) => {
     <>
     <Menu />
     <h1 className="text-center m-3">Private & Semi Private Personal Training in Costa Mesa, CA</h1>
-    <h2 className="tex-center m-3">How good would it feel to finally have the body you want? See how our team of experts can help you look, feel and perform at your best.</h2>
+    <h2 className="text-center m-3">How good would it feel to finally have the body you want? See how our team of experts can help you look, feel and perform at your best.</h2>
 
     <div className="container mt-5">
       <div className="flex-row d-flex">
