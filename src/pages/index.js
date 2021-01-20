@@ -27,6 +27,7 @@ const IndexPage = (props) => {
         Let us help you look and feel better than you ever have in your life.</p>
     </BackgroundImage>
 
+
     <h2 className="text-center">Private & Semi Private Personal Training in Costa Mesa, CA.</h2>
 
     <div className="container">
