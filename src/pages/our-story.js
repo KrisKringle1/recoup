@@ -21,7 +21,7 @@ const Story = (props) => {
             entrusting us with your health and wellness.
             It’s a consideration we don’t take lightly. After spending over a decade in the
             personal training and nutrition industry, we fell in love with helping people live
-            a life they rightfully deserve.
+            a life they so rightfully deserve.
             With that shared passion, it only made sense to create RECOUP to serve men and women
             like yourself who understand they are looking for expert help, want a plan and the support
             to see it through, and want to see results quickly.
