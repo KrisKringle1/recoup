@@ -11,7 +11,7 @@ const KickStart = (props) => {
     <Menu />
     <h1 className="text-center">Our Next BALANCED HABITS 28-Day KICKSTART Starts September 19th!</h1>
     <div className="container my-5">
-      <p className='text-center'>We’re super excited that you’re here and ready to commit to a healthier lifestyle in 2020!</p>
+      <p className='text-center'>We’re super excited that you are here and ready to commit to a healthier lifestyle in 2020!</p>
       <p className="text-center">You too can get back on track, lose weight, regain your energy and boost your confidence with our 28 Day Nutrition and Fitness Program!</p>
       <p className="text-center">Even better, change your life and get it for free!</p>
     </div>
